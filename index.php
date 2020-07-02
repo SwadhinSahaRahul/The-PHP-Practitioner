@@ -2,34 +2,10 @@
 
 require 'functions.php';
 
-class Task
-{
-    protected $completed = false;
-    public $description;
+require 'Task.php';
 
-    public function __construct($description)
-    {
-        $this->description = $description;
-    }
+$pdo = connectToDb();
 
-    public function complete()
-    {
-        $this->completed = true;
-    }
-
-    public function isComplete()
-    {
-        return $this->completed;
-    }
-}
-
-$tasks = [
-    new Task("Go to store"),
-    new Task("Do Homework"),
-    new Task("Wash cloths"),
-];
-
-$tasks[0]->complete();
-$tasks[2]->complete();
+$tasks = fetchAllTasks($pdo);
 
 require 'index.view.php';
