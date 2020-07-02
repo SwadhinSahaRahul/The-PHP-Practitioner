@@ -1,5 +1,7 @@
 <?php
 
+require 'functions.php';
+
 $task = [
     "title" => "Finish Homework.",
     'due' => 'today',
@@ -7,8 +9,5 @@ $task = [
     'completed' => true
 ];
 
-/*echo "<pre>";
-die(var_dump($person));
-echo "</pre>";*/
-
+dd($task);
 require 'index.view.php';
