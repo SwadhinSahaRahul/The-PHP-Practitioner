@@ -1,10 +1,10 @@
 <?php
 
-$person = [
-    "name" => "Swadhin Saha",
-    "age" => 28,
-    "address" => "Dhaka",
-    "career" => "Web Developer"
+$task = [
+    "title" => "Finish Homework.",
+    'due' => 'today',
+    'assigned_to' => 'Rahul',
+    'completed' => true
 ];
 
 /*echo "<pre>";

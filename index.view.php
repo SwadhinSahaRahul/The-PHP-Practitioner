@@ -16,9 +16,29 @@
 <body>
 
 <ul>
-    <?php foreach ($person as $attri => $value): ?>
-        <li><strong><?= "$attri:" ?></strong><?= "$value" ?></li>
+    <h1>Task for the day</h1>
+
+    <?php foreach ($task as $heading => $value): ?>
+        <li>
+            <strong><?= ucwords($heading) ?></strong>: <?= "$value" ?>
+        </li>
     <?php endforeach; ?>
+
+    <hr>
+
+    <li>
+        <strong>Name </strong>: <?= $task['title'] ?>
+    </li>
+    <li>
+        <strong>Due date </strong>: <?= $task['due'] ?>
+    </li>
+    <li>
+        <strong>Assigned to </strong>: <?= $task['assigned_to'] ?>
+    </li>
+    <li>
+        <strong>Completed </strong>: <?= $task['completed'] ? 'Complete' : "Incomplete" ?>
+    </li>
+
 </ul>
 
 </body>
