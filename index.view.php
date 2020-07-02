@@ -15,13 +15,9 @@
 </head>
 <body>
 
-<header>
-    <h1><?= implode(', ', $names) ?></h1>
-</header>
-
 <ul>
-    <?php foreach ($names as $name): ?>
-        <li><?= $name ?></li>
+    <?php foreach ($person as $attri => $value): ?>
+        <li><strong><?= "$attri:" ?></strong><?= "$value" ?></li>
     <?php endforeach; ?>
 </ul>
 
