@@ -12,7 +12,7 @@
             text-align: center;
         }
 
-        .icon{
+        .icon {
             background-color: green;
         }
     </style>
@@ -20,35 +20,20 @@
 <body>
 
 <ul>
-    <h1>Task for the day</h1>
+    <h1>Tasks for the day</h1>
 
-    <?php foreach ($task as $heading => $value): ?>
-        <li>
-            <strong><?= ucwords($heading) ?></strong>: <?= "$value" ?>
-        </li>
-    <?php endforeach; ?>
+    <?php foreach ($tasks as $task): ?>
 
-    <hr>
-
-    <li>
-        <strong>Name </strong>: <?= $task['title'] ?>
-    </li>
-    <li>
-        <strong>Due date </strong>: <?= $task['due'] ?>
-    </li>
-    <li>
-        <strong>Assigned to </strong>: <?= $task['assigned_to'] ?>
-    </li>
-    <li>
-        <strong>Completed </strong>:
-<!--        --><?//= $task['completed'] ? 'Complete' : "Incomplete" ?>
-
-        <?php if ($task['completed']): ?>
-            <span class="icon">&#9989</span>
-        <?php else: ?>
-            Incomplete
+        <?php if ($task->isComplete()): ?>
+            <strike>
         <?php endif; ?>
-    </li>
+        <li>
+            <?= $task->description ?>
+        </li>
+        <?php if ($task->isComplete()): ?>
+            </strike>
+        <?php endif; ?>
+    <?php endforeach; ?>
 
 </ul>
 
