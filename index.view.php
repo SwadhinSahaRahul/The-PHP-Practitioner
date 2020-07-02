@@ -11,6 +11,10 @@
             padding: 2em;
             text-align: center;
         }
+
+        .icon{
+            background-color: green;
+        }
     </style>
 </head>
 <body>
@@ -36,7 +40,14 @@
         <strong>Assigned to </strong>: <?= $task['assigned_to'] ?>
     </li>
     <li>
-        <strong>Completed </strong>: <?= $task['completed'] ? 'Complete' : "Incomplete" ?>
+        <strong>Completed </strong>:
+<!--        --><?//= $task['completed'] ? 'Complete' : "Incomplete" ?>
+
+        <?php if ($task['completed']): ?>
+            <span class="icon">&#9989</span>
+        <?php else: ?>
+            Incomplete
+        <?php endif; ?>
     </li>
 
 </ul>
