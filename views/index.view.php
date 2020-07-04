@@ -1,31 +1,4 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PHP</title>
-    <style>
-        header {
-            background-color: #c4c4c4;
-            padding: 2em;
-            text-align: center;
-        }
-
-        .icon {
-            background-color: green;
-        }
-    </style>
-</head>
-<body>
-
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/views/about.view.php">About Page</a></li>
-        <li><a href="/views/contact.view.php">Contact Page</a></li>
-    </ul>
-</nav>
+<?php require('partials/head.php') ?>
 
 <ul>
     <h1>Tasks for the day</h1>
@@ -45,5 +18,4 @@
 
 </ul>
 
-</body>
-</html>
+<?php require('partials/footer.php') ?>
