@@ -19,6 +19,14 @@
 </head>
 <body>
 
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/views/about.view.php">About Page</a></li>
+        <li><a href="/views/contact.view.php">Contact Page</a></li>
+    </ul>
+</nav>
+
 <ul>
     <h1>Tasks for the day</h1>
 
