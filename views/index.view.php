@@ -1,22 +1,14 @@
 <?php require('partials/head.php') ?>
 
-    <!--<ul>
-        <h1>Tasks for the day</h1>
-
-        <?php /*foreach ($tasks as $task): */ ?>
-
-            <?php /*if ($task->completed): */ ?>
-                <strike>
-            <?php /*endif; */ ?>
+    <h1>Users</h1>
+    <ul>
+        <?php foreach ($users as $user): ?>
             <li>
-                <? /*= $task->description */ ?>
+                <?= $user->name ?>
             </li>
-            <?php /*if ($task->completed): */ ?>
-                </strike>
-            <?php /*endif; */ ?>
-        <?php /*endforeach; */ ?>
+        <?php endforeach; ?>
 
-    </ul>-->
+    </ul>
 
     <h2>Submit Your Name</h2>
     <form action="/name" method="post">
