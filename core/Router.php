@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Core;
+
+use Exception;
 
 class Router
 {
@@ -39,12 +42,16 @@ class Router
 
     protected function callAction($controller, $action)
     {
-        if (!method_exists($controller, $action)) {
+        $controller = "App\\Controllers\\{$controller}";
+
+        $controllerClass = new $controller();
+
+        if (!method_exists($controllerClass, $action)) {
             throw new Exception(
                 "{$controller} does not respond to the {$action} action."
             );
         }
-        return (new $controller)->$action();
+        return $controllerClass->$action();
     }
 
     public function get($uri, $controller)
